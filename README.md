@@ -1,14 +1,16 @@
 # bash_radio
+
 Script en bash para escuchar radio online
 
+(son dos archivos solo por que estoy practicando)
 
 Dependencias:
 
-figlet
+    figlet
 
-mpv
+    mpv
 
-notify-send
+    notify-send
 
 Ejecuta el archivo inicio.sh
 
