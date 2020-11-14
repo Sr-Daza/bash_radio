@@ -5,7 +5,9 @@ Script en bash para escucchar radio online
 Dependencias:
 
 figlet
+
 mpv
+
 notify-send
 
 Ejecuta el archivo inicio.sh
