@@ -1,5 +1,5 @@
 # bash_radio
-Script en bash para escucchar radio online
+Script en bash para escuchar radio online
 
 
 Dependencias:
