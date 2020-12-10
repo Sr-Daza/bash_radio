@@ -2,15 +2,31 @@
 
 Script en bash para escuchar radio online
 
-(son dos archivos solo por que estoy practicando)
-
 Dependencias:
 
     figlet
 
     mpv
 
-    notify-send
+    libnotify
 
 
-El archivo "radios" contiene el nombre y la url de cada estacion de radio... Aqui puedes agregar las que tu deses bajo el mismo formato
+
+# INSTALACIÓN
+
+git clone https://github.com/Sr-Daza/bash_radio
+
+cd bash_radio
+
+makepkg
+
+makepkg -si
+
+
+# AGREGAR ESTACIONES DE RADIO
+
+El archivo "$HOME/.config/bashradio/radios" contiene el nombre y la url de cada estacion de radio... Aqui puedes agregar las que tu deses bajo el  formato:
+
+Nombre de la estacion
+http://ruta_hacia_la_estacion
+
