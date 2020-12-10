@@ -1,4 +1,4 @@
-# bash_radio
+# radio_bash
 
 Script en bash para escuchar radio online
 
