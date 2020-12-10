@@ -27,7 +27,8 @@ makepkg -si
 
 El archivo "$HOME/.config/bashradio/radios" contiene el nombre y la url de cada estacion de radio... Aqui puedes agregar las que tu deses bajo el  formato:
 
-Nombre de la estacion
+*Nombre de la estacion*
 
-http://ruta_hacia_la_estacion
+*http://ruta_hacia_la_estacion*
 
+Según se muestra en ese archivo
