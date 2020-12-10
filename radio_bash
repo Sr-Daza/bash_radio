@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-abs_dir=$(dirname "$(readlink -f "$0")")
-
 banner () {
 
     clear
@@ -15,9 +13,7 @@ banner () {
 lista () {
 
     total=$(echo "$2"|wc -l)
-#    echo -e "total $total\n"
     i=1
-#    banner
     while read line;do
 
         if [ $i -le $total ]; then
@@ -37,7 +33,6 @@ lista () {
     done
 
     if [ 0 -lt $num ] && [ $num -le $total ];then
-#        banner
         titulo=$(echo "$nombres" | sed -n "$num p")
         audio=$(echo "$url"|sed -n "$num p")
         notify-send "$titulo"
@@ -64,4 +59,3 @@ leer_radio () {
 }
 
 leer_radio
-#banner
