@@ -25,6 +25,6 @@ md5sums=(78dfd554d061268f4674099d1aa98bfc 0e080f7e6d03ba2acb08dc6268f4efff)
 validpgpkeys=()
 
 package() {
-install -Dm755 "$srcdir"/radio_bash "$pkgdir"/usr/bin/radio_bash
+install -Dm755 "$srcdir"/radio_bash /usr/bin/radio_bash
 install -Dm644 "$srcdir"/radios "$HOME"/.config/bashradio/radios
 }
