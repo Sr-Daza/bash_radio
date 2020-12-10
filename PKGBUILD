@@ -19,9 +19,9 @@ backup=()
 options=()
 install=
 changelog=
-source=("radio_bash" "radios")
+source=("https://github.com/Sr-Daza/bash_radio/blob/main/radio_bash" "https://github.com/Sr-Daza/bash_radio/blob/main/radios")
 noextract=()
-md5sums=(171572626637c9dcc99cb33486a09e4c 0e080f7e6d03ba2acb08dc6268f4efff)
+md5sums=(78dfd554d061268f4674099d1aa98bfc 0e080f7e6d03ba2acb08dc6268f4efff)
 validpgpkeys=()
 
 package() {
