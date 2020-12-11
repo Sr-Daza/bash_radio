@@ -22,6 +22,9 @@ makepkg
 
 makepkg -si
 
+Y ejecutas con el comando:
+
+radio_bash
 
 # AGREGAR ESTACIONES DE RADIO
 
