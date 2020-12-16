@@ -1,6 +1,6 @@
 # Maintainer: SrDaza <youremail@domain.com>
 pkgname=Radio_bash
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 #epoch=
 pkgdesc="Radio en terminal mediante bash y mpv"
