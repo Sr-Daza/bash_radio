@@ -1,0 +1,73 @@
+#!/usr/bin/bash
+
+abs_dir=$(dirname "$(readlink -f "$0")")
+
+banner () {
+
+    #clear
+    reset
+    figlet -c Radio Bash
+    echo -e "\n\e[33m        --------------------by SrDaza---------------------\n"
+    echo -e "        -          Radio Bash\n        "
+    echo -e "        -  Estaciones de radio online en terminal (mpv) \n"
+    echo -e "        ---------------------------------------------------\e[0m \n\n"
+
+#leer_radio
+}
+
+
+lista () {
+
+    total=$(echo "$2"|wc -l)
+#    echo -e "total $total\n"
+    i=1
+#    banner
+    while read line;do
+
+        if [ $i -le $total ]; then
+
+            echo "$i - $line"
+            ((i=i+1))
+
+        fi
+
+    done<<<$2
+    num=""
+    while ! [[ "$num" =~ ^[0-9]+$ ]] ;do
+#	read -p "\nEscribe el NUMERO de la estacion a eschuchar:  " num
+        echo -e "\n\e[94m(ctrl+c = Salir del programa) \e[0m"
+        read -p "Escribe el NUMERO de la estación a escuchar: " num
+
+    done
+
+    if [ 0 -lt $num ] && [ $num -le $total ];then
+#        banner
+        titulo=$(echo "$nombres" | sed -n "$num p")
+        audio=$(echo "$url"|sed -n "$num p")
+        notify-send "$titulo"
+	banner
+	echo -e "Reproducinedo: \n\e[33m		$titulo\e[0m"
+        echo -e "\nControles de reproduccion:\n    \e[33mp = pause/play\n    q = stop\n    9 = vol - \n    0 = vol +  \e[0m"
+        mpv --no-video --really-quiet "$audio"
+        leer_radio
+
+    else
+
+        echo -e "\033[31m\033[5mWarn:Numero fuera de lista\033[0m\e[0m"
+        sleep 5
+
+    fi
+
+}
+
+leer_radio () {
+    banner
+    echo -e "\nLista de estaciones de radio:\n"
+    url=$(cat $HOME/.config/bashradio/radios | grep http)
+    nombres=$(cat $HOME/.config/bashradio/radios | grep -v http)
+
+    lista "$url" "$nombres"
+}
+
+leer_radio
+#banner
