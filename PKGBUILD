@@ -1,5 +1,5 @@
 # Maintainer: SrDaza <youremail@domain.com>
-pkgname=Radio_bash
+pkgname=radio_bash
 pkgver=0.0.2
 pkgrel=1
 #epoch=
